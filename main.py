@@ -2,7 +2,7 @@ import random
 keep_playing = True
 
 ran_num = random.randint(1, 10)
-guess = None
+
 
 while True:
     print("random number ",ran_num)
@@ -12,11 +12,11 @@ while True:
         print("Too low!")
     elif ran_num < guess:
         print("Too high!")
-    elif guess == ran_num:
+    else:
         print("YOU GOT IT!!")
         keep_playing = input("Do you want to keep playing? y/n ")
-    if keep_playing == "y":
-        guess = None
-        ran_num = random.randint(1, 10)
+        if keep_playing == "y":
+            ran_num = random.randint(1, 10)
+            guess = None
 
 
